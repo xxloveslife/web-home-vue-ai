@@ -1,0 +1,27 @@
+{
+  "name": "web-home-vue",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.8.6",
+    "hotkeys-js": "^3.13.7",
+    "html2canvas": "^1.4.1",
+    "lodash": "^4.17.21",
+    "mitt": "^3.0.1",
+    "pinia": "^2.2.4",
+    "prismjs": "^1.29.0",
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "vite": "^5.4.3"
+  }
+}

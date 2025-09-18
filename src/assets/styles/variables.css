@@ -1,0 +1,18 @@
+:root {
+  --navbar-height: 48px;
+  --sidebar-width: 64px;
+  --assistants-width: 320px;
+  --color-background: #0f1115;
+  --color-background-mute: #161a22;
+  --color-border: #2a2f3a;
+  --color-text: #e6e8eb;
+  --color-text-secondary: #9aa4b2;
+  --color-primary: #4e8cff;
+  --color-primary-soft: rgba(78, 140, 255, .5);
+  --color-icon: #9aa4b2;
+  --color-icon-white: #e6e8eb;
+}
+
+* { box-sizing: border-box; }
+
+
