@@ -15,6 +15,8 @@ export const useSettingsStore = defineStore('settings', {
     isTopNavbar: (s) => s.navbarPosition === 'top'
   },
   actions: {
+    setThemeMode(mode) { this.themeMode = mode },
+    setPrimaryColor(c) { this.primaryColor = c },
     setNavbarPosition(pos) { this.navbarPosition = pos },
     setTopicPosition(pos) { this.topicPosition = pos },
     setShowAssistants(v) { this.showAssistants = !!v },

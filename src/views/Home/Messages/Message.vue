@@ -169,7 +169,7 @@ export default {
 .message-assistant { justify-content:flex-start; }
 .bubble { max-width: 78%; padding:12px 14px; border:1px solid var(--color-border); border-radius:12px; box-shadow: 0 1px 2px rgba(0,0,0,.15); }
 .message-user .bubble { background: rgba(78,140,255,.08); border-color: rgba(78,140,255,.35); }
-.message-assistant .bubble { background: #111827; }
+.message-assistant .bubble { background: var(--color-background-mute); }
 .tools { margin-top:6px; text-align:right; }
 .hl { background: rgba(255, 214, 10, 0.35); color: #fff; border-radius: 2px; padding: 0 1px; }
 .meta { margin-top: 6px; color: var(--color-text-secondary); font-size: 12px; }

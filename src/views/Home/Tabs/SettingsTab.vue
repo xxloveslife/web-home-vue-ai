@@ -33,6 +33,17 @@
       </el-select>
     </div>
     <div class="row">
+      <label>主题模式</label>
+      <el-select v-model="themeMode" size="small" style="width: 180px;">
+        <el-option label="深色" value="dark" />
+        <el-option label="浅色" value="light" />
+      </el-select>
+    </div>
+    <div class="row">
+      <label>主题色</label>
+      <el-color-picker v-model="primaryColor" size="small" show-alpha={false} />
+    </div>
+    <div class="row">
       <label>数据</label>
       <el-button size="small" type="danger" @click="resetAll">清空数据并还原示例</el-button>
     </div>
@@ -41,7 +52,7 @@
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, watch, onMounted } from 'vue'
 import { useSettingsStore } from '@/stores/settings'
 
 export default {
@@ -54,6 +65,18 @@ export default {
     const navbarPosition = computed({ get: () => settings.navbarPosition, set: (v) => settings.setNavbarPosition(v) })
     const showMessageTime = computed({ get: () => settings.showMessageTime, set: (v) => settings.setShowMessageTime(v) })
     const timeFormat = computed({ get: () => settings.timeFormat, set: (v) => settings.setTimeFormat(v) })
+    const themeMode = computed({ get: () => settings.themeMode, set: (v) => settings.setThemeMode(v) })
+    const primaryColor = computed({ get: () => settings.primaryColor, set: (v) => settings.setPrimaryColor(v) })
+
+    const applyTheme = () => {
+      try {
+        const root = document.documentElement
+        root.setAttribute('data-theme', themeMode.value)
+        root.setAttribute('data-theme-primary', primaryColor.value || '')
+      } catch {}
+    }
+    onMounted(applyTheme)
+    watch([themeMode, primaryColor], applyTheme)
     const resetAll = () => {
       if (!window.confirm('确认清空所有本地数据并还原示例吗？')) return
       try {
@@ -63,7 +86,7 @@ export default {
         window.location.reload()
       } catch {}
     }
-    return { messageStyle, topicPosition, navbarPosition, showMessageTime, timeFormat, resetAll }
+    return { messageStyle, topicPosition, navbarPosition, showMessageTime, timeFormat, themeMode, primaryColor, resetAll }
   }
 }
 </script>

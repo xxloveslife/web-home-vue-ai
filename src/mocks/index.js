@@ -4,6 +4,8 @@ export const settingsMock = {
   showAssistants: true,
   showTopics: true,
   messageStyle: 'classic',    // 'classic' | 'bubble'
+  themeMode: 'dark',          // 'light' | 'dark'
+  primaryColor: '#4e8cff',
   showMessageTime: true,
   timeFormat: 'full',         // 'full' | 'relative'
   sidebarIcons: { visible: ['assistants','agents','paintings','translate','minapp','knowledge','files'], disabled: [] }

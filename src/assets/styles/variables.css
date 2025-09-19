@@ -13,6 +13,19 @@
   --color-icon-white: #e6e8eb;
 }
 
+[data-theme="light"] {
+  --color-background: #ffffff;
+  --color-background-mute: #f6f7f9;
+  --color-border: #e5e7eb;
+  --color-text: #222;
+  --color-text-secondary: #666;
+}
+
+[data-theme-primary] {
+  --color-primary: attr(data-theme-primary color, initial);
+  --color-primary-soft: color-mix(in srgb, var(--color-primary) 50%, transparent);
+}
+
 * { box-sizing: border-box; }
 
 
