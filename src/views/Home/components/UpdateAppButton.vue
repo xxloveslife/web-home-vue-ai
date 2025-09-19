@@ -1,18 +1,20 @@
 <template>
-  <el-button text size="small" @click="check">检查更新</el-button>
+  <el-button text size="small" @click="onClick">检查更新</el-button>
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+import { ElMessage } from 'element-plus'
+
+export default defineComponent({
   name: 'UpdateAppButton',
   setup() {
-    const check = () => {
-      // Web 端模拟：弹提示
-      window?.alert?.('已是最新版本（Mock）')
+    const onClick = () => {
+      try { ElMessage.info('暂未接入更新流程（占位）') } catch {}
     }
-    return { check }
+    return { onClick }
   }
-}
+})
 </script>
 
 <style scoped>

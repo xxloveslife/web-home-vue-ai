@@ -36,3 +36,4 @@ export default {
 .list li { padding: 6px 0; display:flex; gap: 8px; align-items: baseline; }
 .list b { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 </style>
+
